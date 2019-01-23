@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIM与智慧城市研究院工作管理平台</title>
+    <link rel="stylesheet" href="Web/front/css/rank.css">
+</head>
+
+<body>
+    <header>
+        <p id=bim>BIM与智慧城市研究院</p>
+    </header>
+
+    <aside class="aside">
+        <ul>
+            <li id="guanli">管理系统</li>
+            <li id="chaxun">查询系统</li>
+        </ul>
+    </aside>
+
+    <article>
+        <div class="date">
+            <p>
+                <?php echo $month; ?>
+            </p>
+        </div>
+        <table>
+            <tr>
+                <th>排名</th>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>备注</th>
+            </tr>
+            <?php
+            foreach($data as $key=>$rec)
+            {
+            ?>
+                <tr class="cellcolor">
+                    <td>第
+                        <?php echo $key+1; ?>名
+                    </td>
+                    <td>
+                        <?php echo $rec["name"]; ?>
+                    </td>
+                    <td>
+                        <?php echo $rec["sum"]; ?>
+                    </td>
+                    <td>
+                        <a href="?c=InfoAndScore&month=<?php echo $month; ?>&name=<?php echo $rec['name']; ?>" title="查询"><b>查询</b></a>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </article>
+
+    <footer>
+        <div id="footerlogo">
+            <img src="Web/front/images/新院标.png " alt="院标" width="20%" height="20%">
+        </div>
+    </footer>
+</body>
+
+</html>

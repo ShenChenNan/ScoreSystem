@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIM与智慧城市研究院——信息查询系统</title>
+    <link rel="stylesheet" href="Web/front/css/info_score.css">
+    <script src="Web/front/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p>成绩查询系统</p>
+        </div>
+    </header>
+
+    <aside class="aside">
+        <ul>
+            <li>
+                <a href="?" title="姓名">
+                    <?php echo $name; ?>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <article class="table">
+        <div id="tablerow">
+            <div id="leida" style="width: 500px;height: 650px;"> </div>
+            <div id="zhuzhuangtu" style="width: 500px;height: 650px;"></div>
+        </div>
+    </article>
+
+    <footer>
+        <div id="footerlogo">
+            <img src="Web/front/images/新院标.png" alt="院标" width="20%" height="20%">
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    var url = "?c=InfoAndScore&a=jsonRadar&month=<?php echo $month; ?>&name=<?php echo $name; ?>&callback=showRadar";
+    var radarJs = document.createElement("script");
+    radarJs.setAttribute("src", url);
+
+    url = "?c=InfoAndScore&a=jsonBar&name=<?php echo $name; ?>&callback=showBar"
+    var barJs = document.createElement("script");
+    barJs.setAttribute("src", url);
+
+    var head = document.getElementsByTagName("head")[0].appendChild(radarJs);
+    head = document.getElementsByTagName("head")[0].appendChild(barJs);
+</script>
+<script src="Web/front/js/radar.js"></script>
+<script src="Web/front/js/bar.js"></script>

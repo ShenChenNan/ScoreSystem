@@ -1,0 +1,134 @@
+header p#bim {
+    margin: 0px;
+    height: 60px;
+    background-color: rgb(52, 160, 202);
+    text-align: center;
+    font-family: Microsoft YaHei, sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color: aliceblue;
+    padding-top: 15px;
+    border-bottom: 10px solid rgb(206, 206, 206);
+}
+
+.header {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.aside {
+    width: 180px;
+    height: 700px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background-color: rgb(52, 160, 202);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li#pingfen {
+    height: 30px;
+    width: 160px;
+    font-family: Microsoft YaHei, sans-serif;
+    color: rgb(20, 87, 146);
+    text-align: center;
+    background-color: aliceblue;
+    position: absolute;
+    border: 2px solid rgb(206, 206, 206);
+    padding-top: 5px;
+    top: 120px;
+    left: 30px;
+}
+
+ul li#guanli {
+    height: 30px;
+    width: 160px;
+    font-family: Microsoft YaHei, sans-serif;
+    color: rgb(20, 87, 146);
+    text-align: center;
+    background-color: aliceblue;
+    position: absolute;
+    border: 2px solid rgb(206, 206, 206);
+    padding-top: 5px;
+    top: 180px;
+    left: 30px;
+}
+
+ul li#chaxun {
+    height: 30px;
+    width: 160px;
+    font-family: Microsoft YaHei, sans-serif;
+    color: rgb(20, 87, 146);
+    text-align: center;
+    background-color: aliceblue;
+    position: absolute;
+    border: 2px solid rgb(206, 206, 206);
+    padding-top: 5px;
+    top: 240px;
+    left: 30px;
+}
+
+article {
+    position: absolute;
+    top: 120px;
+    left: 400px;
+}
+
+article table {
+    border: thin solid black;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bolder;
+    color: rgb(20, 87, 146);
+    border: thin solid black;
+    padding: 5px 30px 5px 30px;
+    background-color: rgba(156, 156, 156, 0.685);
+    font-family: Microsoft YaHei;
+}
+
+td {
+    border: thin solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.cellcolor {
+    background-color: rgba(224, 224, 224, 0.685);
+}
+
+.anniu {
+    padding: 0px 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(79, 139, 218);
+}
+
+a:visited {
+    color: rgb(79, 139, 218);
+}
+
+a:hover {
+    color: rgb(207, 61, 61);
+    text-decoration: underline;
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 1250px;
+}
+
+footer {
+    text-align: center;
+}

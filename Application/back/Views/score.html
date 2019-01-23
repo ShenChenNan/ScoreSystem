@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIM与智慧城市研究院工作管理平台</title>
+    <link rel="stylesheet" href="Web/back/css/score.css">
+    <script src="Web/back/js/jquery-3.3.1.min.js"></script>
+    <script>
+        window.onload = function showDate() {
+            // 给input  date设置默认值
+            var now = new Date();
+            //格式化日，如果小于9，前面补0
+            var day = ("0" + now.getDate()).slice(-2);
+            //格式化月，如果小于9，前面补0
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+            //拼装完整日期格式
+            var today = now.getFullYear() + "-" + (month) + "-" + (day);
+            //完成赋值
+            $('#date').val(today);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="allcontent">
+        <header>
+            <p id=bim>BIM与智慧城市研究院</p>
+            <div class="header">
+                <input id=btclose1 type="button" name="xinxi" value="基本信息" />
+                <input id=btclose2 type="button" name="zhuxiao" value="注销" onclick="self.location='?p=back&a=logout';" />
+            </div>
+        </header>
+
+        <aside class="aside">
+            <ul>
+                <li id="pingfen">评分系统</li>
+                <li id="guanli">管理系统</li>
+                <li id="chaxun">查询系统</li>
+
+            </ul>
+        </aside>
+
+        <article>
+            <form action="?p=back&c=Score&a=score" method="post">
+                <div>
+                    <input type="date" name="date" id="date">
+                </div>
+                <table>
+                    <tr>
+                        <th>姓名</th>
+                        <th>积极性</th>
+                        <th>创新性</th>
+                        <th>责任感</th>
+                        <th>熟练度</th>
+                        <th>实施性</th>
+                        <th>完成度</th>
+                        <th>备注</th>
+                    </tr>
+                    <?php
+                    foreach($result as $key=>$value)
+                    {
+                    ?>
+                        <tr class="cellcolor">
+                            <td>
+                                <input type="text" name="name[]" id="" value="<?php echo $value; ?>" hidden>
+                                <?php echo $value; ?>
+                                </input>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 1; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 1; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 1; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 1; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 1; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 2; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 2; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 2; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 2; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 2; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 3; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 3; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 3; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 3; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 3; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 4; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 4; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 4; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 4; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 4; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 5; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 5; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 5; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 5; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 5; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <div class="anniu">
+                                    <input type="radio" name="<?php echo $value . 6; ?>" value="1">1
+                                    <input type="radio" name="<?php echo $value . 6; ?>" value="2">2
+                                    <input type="radio" name="<?php echo $value . 6; ?>" value="3">3
+                                    <input type="radio" name="<?php echo $value . 6; ?>" value="4">4
+                                    <input type="radio" name="<?php echo $value . 6; ?>" value="5">5</div>
+                            </td>
+                            <td>
+                                <a href="#" title="删除" onclick="deleteItem(this);"> <b>删除</b></a>
+                            </td>
+                        </tr>
+                        <?php
+                    } 
+                    ?>
+                </table>
+                <input type="submit" value="提交">
+            </form>
+        </article>
+
+        <footer>
+            <div>
+                <img src="Web/back/images/新院标.png " alt="院标 " width="20% " height="20% ">
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+<script>
+    function deleteItem(obj) {
+        $(obj).parent().parent().remove();
+    }
+</script>

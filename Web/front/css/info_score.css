@@ -1,0 +1,104 @@
+    body {
+        background: url(../images/beijing2.jpg) no-repeat;
+        background-size: 100% 110%;
+    }
+    
+    p {
+        background: url(../images/beijing.png) no-repeat;
+        background-size: 100% 100%;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-family: Microsoft YaHei, sans-serif;
+        text-align: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 5px;
+    }
+    
+    input {
+        width: 150px;
+        height: 20px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(202, 202, 202);
+        border-radius: 5px;
+        position: absolute;
+        top: 33px;
+        right: 30px;
+        padding: 5px;
+    }
+    
+    .table {
+        position: absolute;
+        top: 120px;
+        left: 235px;
+        display: table;
+        border-spacing: 10px;
+        margin-top: -30px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    div#tablerow {
+        display: table-row;
+    }
+    
+    #leida,
+    #zhuzhuangtu,
+    #pingjia {
+        display: table-cell;
+        text-align: center;
+        background-color: rgba(78, 78, 78, 0.05);
+        padding: 30px 10px 10px 60px;
+        border-radius: 5px;
+        border: 1px solid rgb(20, 87, 146);
+    }
+    
+    footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .aside {
+        width: 180px;
+        height: 690px;
+        margin-top: -18px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+        border: 1px solid rgb(20, 87, 146);
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    li {
+        height: 30px;
+        width: 160px;
+        font-family: Microsoft YaHei, sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        background: url(../images/beijing.png);
+        background-size: 100% 100%;
+        border-radius: 5px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:link {
+        color: rgb(255, 255, 255);
+    }
+    
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+    
+    a:hover {
+        color: rgb(207, 61, 61);
+        text-decoration: underline;
+    }
